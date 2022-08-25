@@ -1,0 +1,11 @@
+CREATE TABLE Product77 (
+    Product_id int,
+    Product_name varchar(255),
+    Date_of_purchase varchar(255),
+    Amount int,
+    City_of_Delivery varchar(255)
+);
+
+INSERT INTO Product77
+VALUES('345', 'Book', '22 july', '1000', 'Dehradun');
+
