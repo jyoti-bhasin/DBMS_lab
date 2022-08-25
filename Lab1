@@ -1,0 +1,19 @@
+CREATE TABLE Product110 (
+    Product_id int,
+    Product_name varchar(255),
+    Date_of_purchase varchar(255),
+    Amount int,
+    City_of_Delivery varchar(255)
+);
+
+INSERT INTO Product110
+VALUES('345', 'Book', '22 july', '1500', 'Dehradun');
+
+SELECT product_id FROM Product110
+WHERE City_of_Delivery='Dehradun' AND Amount>'1000';
+
+SELECT product_name FROM Product110
+WHERE Amount>'1000' AND Amount<'2000';
+
+SELECT product_name FROM Product110
+WHERE City_of_Delivery='Dehradun' OR City_of_Delivery='Roorkie' OR City_of_Delivery='Haridwar' OR City_of_Delivery='Delhi';
