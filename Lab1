@@ -17,3 +17,6 @@ WHERE Amount>'1000' AND Amount<'2000';
 
 SELECT product_name FROM Product110
 WHERE City_of_Delivery='Dehradun' OR City_of_Delivery='Roorkie' OR City_of_Delivery='Haridwar' OR City_of_Delivery='Delhi';
+//Alternative- 
+//SELECT product_name FROM Product110
+//WHERE City_of_Delivery IN('Dehradun', 'Roorkie', 'Delhi');
