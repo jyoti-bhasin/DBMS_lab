@@ -1,0 +1,56 @@
+CREATE TABLE customer6(
+customer_id int PRIMARY KEY,
+customer_name varchar(255),
+customer_dob varchar(255),
+customer_city varchar(255),
+phone_no int
+) ;
+
+INSERT INTO customer6
+VALUES('1', 'jyoti', '22 aug', 'dehradun', '98688686');
+
+DESC customer
+
+INSERT INTO customer6
+VALUES('2', 'swapnita', '27 july', 'dehradun', '84548844');
+
+INSERT INTO customer6
+VALUES('4', 'neha', '22 september', 'chennai', '8489959');
+
+INSERT INTO customer6
+VALUES('5', 'rid', '22 june', 'jammu', '54664675');
+
+INSERT INTO customer6
+VALUES('124', 'riya', '22 july', 'dehradun', '77575784');
+
+
+DESC customer6
+
+SELECT customer_name from customer6
+WHERE customer_city='dehradun' AND customer_id='124';
+
+SELECT customer_name from customer6
+WHERE customer_city='dehradun' OR customer_id='124';
+
+SELECT customer_name from customer6
+WHERE NOT customer_city='dehradun';
+
+SELECT customer_id from customer6
+WHERE customer_city='dehradun';
+
+SELECT customer_name FROM customer6
+WHERE customer_city IN ('dehradun', 'chennai', 'jammu');
+
+SELECT customer_name FROM customer6
+WHERE customer_city NOT IN ('dehradun', 'chennai', 'jammu');
+
+SELECT customer_name,customer_city FROM customer6
+WHERE customer_id BETWEEN 124 AND 128;
+
+DELETE FROM customer6 WHERE customer_name='riya';
+
+DESC customer
+
+UPDATE customer
+SET customer_name='computer'
+WHERE customer_id='2';
