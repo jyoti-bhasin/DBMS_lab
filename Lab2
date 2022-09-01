@@ -47,10 +47,24 @@ WHERE customer_city NOT IN ('dehradun', 'chennai', 'jammu');
 SELECT customer_name,customer_city FROM customer6
 WHERE customer_id BETWEEN 124 AND 128;
 
+//DELETE
+
 DELETE FROM customer6 WHERE customer_name='riya';
 
-DESC customer
+DESC customer6
 
-UPDATE customer
+//UPDATE 
+
+UPDATE customer6
 SET customer_name='computer'
 WHERE customer_id='2';
+
+//AGGREGATE FUNCTIONS
+
+SELECT MAX(customer_id) FROM customer6;
+SELECT MIN(customer_id) FROM customer6;
+SELECT AVG(customer_id) FROM customer6;
+SELECT COUNT(customer_id) FROM customer6;
+SELECT SUM(customer_id) FROM customer6;
+
+SELECT * FROM customer6
