@@ -1,1 +1,58 @@
+CREATE TABLE Employee(
+Empid int,
+Ename varchar(255),
+City varchar(255),
+DOB DATE,
+Salary int );
+
+INSERT INTO Employee
+VALUES('1','Jyoti','Dehradun',to_date('2001-12-1', 'yyyy-mm-dd'),'1000');
+
+INSERT INTO Employee
+VALUES('2','Riya','Dehradun',to_date('2001-2-10', 'yyyy-mm-dd'),'7000');
+
+INSERT INTO Employee
+VALUES('3','Diya','Delhi',to_date('2001-11-2', 'yyyy-mm-dd'),'2000');
+
+INSERT INTO Employee
+VALUES('4','Swap','Rajasthan',to_date('2001-7-10', 'yyyy-mm-dd'),'3000');
+
+INSERT INTO Employee
+VALUES('5','Neha','Dehradun',to_date('2001-3-20', 'yyyy-mm-dd'),'5000');
+
+ALTER TABLE Employee
+ADD constraint test_pk PRIMARY KEY(Empid);
+
+ALTER TABLE Employee
+ADD Pancard_no int;
+
+UPDATE Employee
+SET Pancard_no = '563637'
+WHERE Empid=1;
+
+UPDATE Employee
+SET Pancard_no = '563337'
+WHERE Empid=2;
+
+UPDATE Employee
+SET Pancard_no = '7773637'
+WHERE Empid=3;
+
+UPDATE Employee
+SET Pancard_no = '1134637'
+WHERE Empid=4;
+
+UPDATE Employee
+SET Pancard_no = '98773637'
+WHERE Empid=5;
+
+
+
+ALTER TABLE Employee
+DROP PRIMARY KEY(Empid);
+
+INSERT INTO Employee
+VALUES('5','Neha','Dehradun',to_date('2001-3-20', 'yyyy-mm-dd'),'5000','786867');
+
+
 
