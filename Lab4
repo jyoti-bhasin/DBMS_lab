@@ -88,5 +88,8 @@ WHERE city LIKE '%n'
 SELECT city FROM Manager2
 WHERE city LIKE '%a%'
 
+//NOT LIKE
+SELECT city FROM Manager2
+WHERE city NOT LIKE '%a%'
 
 
