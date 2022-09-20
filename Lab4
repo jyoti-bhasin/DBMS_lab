@@ -1,0 +1,92 @@
+CREATE TABLE Manager1 (
+M_id int,
+M_name varchar(255),
+M_salary int,
+M_DOB date,
+city varchar(255)
+);
+
+INSERT INTO Manager1
+VALUES('1', 'Jyoti', '526636', '8-Sep-2002', 'Dehradun');
+
+INSERT INTO Manager1
+VALUES('2', 'Riya', '52666', '18-Sep-2003', 'Dehradun');
+
+INSERT INTO Manager1
+VALUES('3', 'Swapnita', '26636', '28-Aug-2004', 'Delhi');
+
+INSERT INTO Manager1
+VALUES('4', 'Neha', '52666', '14-Jun-2002', 'Dehradun');
+
+INSERT INTO Manager1
+VALUES('5', 'hello', '96636', '11-Nov-2003', 'Jaipur');
+
+ALTER TABLE Manager1 ADD PRIMARY KEY(M_id);
+
+ALTER TABLE Manager1
+ADD Pancard_no int;
+
+UPDATE Manager1
+SET Pancard_no = '563637'
+WHERE M_id=1;
+
+UPDATE Manager1
+SET Pancard_no = '563337'
+WHERE M_id=2;
+
+UPDATE Manager1
+SET Pancard_no = '7773637'
+WHERE M_id=3;
+
+UPDATE Manager1
+SET Pancard_no = '1134637'
+WHERE M_id=4;
+
+UPDATE Manager1
+SET Pancard_no = '98773637'
+WHERE M_id=5;
+
+ALTER TABLE Manager1 MODIFY M_name varchar(40);
+desc Manager1
+
+ALTER TABLE Manager1
+DROP PRIMARY KEY(M_id);
+
+ALTER TABLE Manager1 DROP PRIMARY KEY;
+
+ALTER TABLE Manager1 RENAME column M_name to E_name;
+
+RENAME Manager1 to Manager2
+
+SELECT COUNT(E_name) FROM Manager2
+GROUP BY(city);
+
+SELECT COUNT(E_name),city FROM Manager2
+GROUP BY(city);
+
+SELECT COUNT(E_name),city FROM Manager2
+GROUP BY(city) 
+HAVING COUNT(E_name)>2;
+
+//city name starts with d
+SELECT city FROM Manager2
+WHERE city LIKE 'd%'
+
+//2nd character of name is a
+SELECT city FROM Manager2
+WHERE city LIKE '_a%'
+
+//name length is 5
+SELECT city FROM Manager2
+WHERE city LIKE '_____'
+
+//name ends with n
+SELECT city FROM Manager2
+WHERE city LIKE '%n'
+
+//a should be there in name
+SELECT city FROM Manager2
+WHERE city LIKE '%a%'
+
+
+
