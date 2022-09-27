@@ -1,0 +1,7 @@
+//alias use 'as'
+SELECT AVG(Salary) as AVG_Salary FROM Employee
+
+//create view table
+CREATE VIEW xyz as
+SELECT Ename FROM Employee
+
