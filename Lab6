@@ -13,3 +13,8 @@ check(salary>2000))
 //find age from dob
 
 select round(Months_Between(Sysdate, dob)/12) as Age from emp;
+
+//add a new column of age in physical level
+
+update emp
+set 'age' = select((round(Months_Between(Sysdate, dob)/12);
