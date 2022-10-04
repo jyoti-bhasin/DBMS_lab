@@ -9,3 +9,7 @@ city varchar(50),
 salary int,
 
 check(salary>2000))
+
+//find age from dob
+
+select round(Months_Between(Sysdate, dob)/12) as Age from emp;
