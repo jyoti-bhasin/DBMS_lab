@@ -1,0 +1,42 @@
+CREATE TABLE customer(
+id int,
+name varchar(255),
+city varchar(255),
+amount int,
+dob date
+);
+
+INSERT INTO customer
+VALUES('1','JYOTI','DEHRADUN','77653','22 AUG');
+
+INSERT INTO customer
+VALUES('2','RIYA','DEHRADUN','11000','14 JUN');
+
+INSERT INTO customer
+VALUES('3','SWAP','MUMBAI','7765','22 JAN');
+
+INSERT INTO customer
+VALUES('4','NEHA','DEHRADUN','15653','12 FEB');
+
+INSERT INTO customer
+VALUES('5','PR','DELHI','6853','2 AUG');
+
+SELECT name FROM customer
+WHERE name LIKE 'a%' AND amount BETWEEN 10000 AND 50000;
+
+ALTER TABLE customer
+ADD age int;
+
+UPDATE customer
+SET age=ROUND(MONTHS_BETWEEN(SYSDATE,dob)/12);
+
+SELECT max(age) FROM customer
+WHERE age < (SELECT MAX(age) FROM customer);
+
+SELECT name FROM customer
+WHERE city = 'DEHRADUN' AND age>'20';
+
+CREATE VIEW xyz as
+SELECT name,city,age FROM customer;
+
+
