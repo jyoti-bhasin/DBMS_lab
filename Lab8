@@ -60,7 +60,15 @@ SELECT B.o_id, B.o_name, A1.cus_id, A1.cus_name
 FROM customer A1, order2 B
 WHERE A1.cus_id=B.c_id AND city='DEHRADUN';
 
+//ORDER NAME STARTS FROM 'R'
 SELECT B.o_id, B.o_name, A1.cus_id, A1.cus_name
 FROM customer A1, order2 B
 WHERE A1.cus_id=B.c_id AND o_name LIKE 'R%';
+
+//CREATE VIEW
+CREATE VIEW XYZ AS
+SELECT B.o_id, B.o_name, A1.cus_id, A1.cus_name
+FROM customer A1, order2 B
+WHERE A1.cus_id=B.c_id ;
+SELECT * FROM XYZ
 
