@@ -60,3 +60,7 @@ SELECT B.o_id, B.o_name, A1.cus_id, A1.cus_name
 FROM customer A1, order2 B
 WHERE A1.cus_id=B.c_id AND city='DEHRADUN';
 
+SELECT B.o_id, B.o_name, A1.cus_id, A1.cus_name
+FROM customer A1, order2 B
+WHERE A1.cus_id=B.c_id AND o_name LIKE 'R%';
+
