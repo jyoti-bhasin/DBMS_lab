@@ -1,0 +1,48 @@
+CREATE TABLE customer ( 
+    cus_id INT PRIMARY KEY, 
+    cus_name VARCHAR(255), 
+    dob DATE, 
+    phone INT, 
+    city VARCHAR(50), 
+    amount INT 
+    ) 
+    
+INSERT INTO customer 
+VALUES('1','Jyoti','22-AUG-2022','536366398','DEHRADUN','5543')
+
+INSERT INTO customer 
+VALUES('2','Neha','2-AUG-2022','53628656','DEHRADUN','1543')
+
+INSERT INTO customer 
+VALUES('3','Eva','2-JAN-2020','13698656','JAIPUR','2543')
+
+INSERT INTO customer 
+VALUES('4','Swap','4-JUL-2021','23298656','DELHI','3543')
+
+INSERT INTO customer 
+VALUES('5','Riya','7-JUNE-2021','33798656','RAJASTHAN','7543')
+
+//ORDER TABLE
+
+CREATE TABLE order2( 
+    o_id INT, 
+    o_name VARCHAR(20), 
+    o_date DATE, 
+    c_id INT, 
+    CONSTRAINT abc PRIMARY KEY(o_id), 
+    CONSTRAINT xyz FOREIGN KEY(c_id) 
+    REFERENCES customer(cus_id))
+    
+INSERT INTO order2 
+VALUES('3','RICE','11-NOV-2022','1')
+
+//DROP CONSTRAINT USING ALTER
+ALTER TABLE order2 
+DROP CONSTRAINT xyz
+
+//ENABLE ON CASCADE DELETE
+ALTER TABLE order2 
+ADD CONSTRAINT xyz FOREIGN KEY(c_id) 
+REFERENCES customer(cus_id) 
+ON DELETE CASCADE
+
